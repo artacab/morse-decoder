@@ -67,23 +67,17 @@ function decode(expr) {
                }      
            }
            direct = complete[index].split(' ');
-
-           //console.log('complete',index, complete[index]);
-           //console.log(direct);
            for (let item = 0; item < direct.length-1; item++) {
                output[item]=MORSE_TABLE[direct[item]];
            }
-           //console.log(output);
            let str = output.join('');
            output=[];
-           //console.log(str);
            if(index==array.length-1){
            res+=str;}
            else{
             res+=str+" ";
            }
         }
-        console.log(res);
       return res;
     }  
 
